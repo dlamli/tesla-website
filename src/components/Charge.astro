@@ -1,0 +1,36 @@
+<!-- <section class="landing-section bg-black w-screen h-screen text-center relative overflow-hidden" data-header-color="black">
+  <div class="relative z-30 h-full flex flex-col">
+    <header>
+      <h2 class="text-black pt-40 text-[40px] font-medium">Model Y</h2>
+      <p class="text-black text-sm underline">Concertar pruebade conducción.</p>
+    </header>
+    <footer class="flex flex-col flex-grow justify-end pb-24">
+      <div class="flex flex-row justify-center gap-x-4">
+        <a class="text-white border-[3px] bg-gray-700 backdrop-blur-sm border-gray-700 rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Explorar inventario</a>
+        <a class="text-black border-[3px] bg-white border-white rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Pedido personalizado</a>
+      </div>
+    </footer>
+  </div>
+  <div class="absolute top-0 bottom-0 h-full w-full z-10">
+    <picture>
+      <img src="/model-y.avif" alt="Model Y" class="h-full w-full object-cover object-center">
+    </picture>
+  </div>
+</section> -->
+
+---
+import Section from "./Section.astro";
+---
+
+<Section
+  color="black"
+  title="Model Y"
+  subTitle="Concertar pruebade conducción.">
+  <div slot="footer">
+    <a class="text-white border-[3px] bg-gray-700 backdrop-blur-sm border-gray-700 rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Explorar inventario</a>
+    <a class="text-black border-[3px] bg-white border-white rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Pedido personalizado</a>
+  </div>
+  <picture slot="background">
+    <img src="/model-y.avif" alt="Model Y" class="h-full w-full object-cover object-center">
+  </picture>
+</Section>
