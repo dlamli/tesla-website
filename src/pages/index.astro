@@ -11,17 +11,44 @@ import Section from '../components/Section.astro';
 	<Header/>
 	<main class="relative w-full h-screen snap-y snap-mandatory overflow-auto">
 		<div class="snap-center">
-			<Hero/>
+			<Hero 
+			color="white"
+			title="Disfrute de Tesla"
+			subTitle="Programe una pruebade conducción hoy mismo."
+			isUnderlineSubTitle={true}>
+			<a slot="footer" class="text-white border-[3px] bg-white/5 backdrop-blur-sm border-white rounded font-medium px-12 py-2 inline-block self-center hover:text-black hover:bg-white transition-colors" href="#">Prueba de conducción</a>
+			<video class="object-cover object-center h-full w-full" slot="video" autoplay muted loop src="/video.webm"></video>
+		</Hero>
 		</div>
 		<div class="snap-center">
-			<Charge/>
+			<Charge
+			color="black"
+			title="Model Y"
+			subTitle="Concertar prueba de conducción."
+			imgName="model-y">
+			<a slot="footer" class="text-white border-[3px] bg-gray-700 backdrop-blur-sm border-gray-700 rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Explorar inventario</a>
+			<a slot="footer" class="text-black border-[3px] bg-white border-white rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Pedido personalizado</a>
+		</Charge>
 		</div>
 		<div class="snap-center">
-			<Hero/>
+			<Charge
+			color="black"
+			title="Model S"
+			subTitle="Agenda tu cita."
+			imgName="model-s">
+			<a slot="footer" class="text-white border-[3px] bg-gray-700 backdrop-blur-sm border-gray-700 rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Explorar inventario</a>
+			<a slot="footer" class="text-black border-[3px] bg-white border-white rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Pedido en linea</a>
+		</Charge>
 		</div>
 		<div class="snap-center">
-			<Charge/>
+			<Charge
+			color="black"
+			title="Model X"
+			subTitle="Precios accesibles"
+			imgName="model-x">
+			<a slot="footer" class="text-white border-[3px] bg-gray-700 backdrop-blur-sm border-gray-700 rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Explorar inventario</a>
+			<a slot="footer" class="text-black border-[3px] bg-white border-white rounded font-medium px-12 py-2 self-center hover:opacity-90 transition-opacity" href="#">Agenda tu reserva</a>
+		</Charge>
 		</div>
-
 	</main>
 </Layout>

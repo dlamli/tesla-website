@@ -15,15 +15,14 @@
 
 ---
 import Section from "./Section.astro";
+const {color, title, subTitle, isUnderlineSubtitle=false} = Astro.props;
 ---
 
 <Section
-  color="white"
-  title="Disfrute de Tesla"
-  subTitle="Programe una pruebade conducción hoy mismo."
-  isUnderlineSubTitle={true}>
-  <div slot="footer">
-    <a slot="footer" class="text-white border-[3px] bg-white/5 backdrop-blur-sm border-white rounded font-medium px-12 py-2 inline-block self-center hover:text-black hover:bg-white transition-colors" href="#">Prueba de conducción</a>
-  </div>
-  <video class="object-cover object-center h-full w-full" slot="video" autoplay muted loop src="/video.webm"></video>
+  color={color}
+  title={title}
+  subTitle={subTitle}
+  isUnderlineSubTitle={isUnderlineSubtitle}>
+  <slot slot="footer" name="footer"></slot>
+  <slot slot="video" name="video"></slot>
 </Section>
